@@ -2,6 +2,9 @@
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
 @import "~bootstrap/scss/bootstrap";
 
+body {
+  background: #ECECEC;
+}
 
 ::-webkit-scrollbar {
   width: 12px;
