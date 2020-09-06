@@ -1,0 +1,26 @@
+.custom-button {
+  margin: 0 5px;
+
+  button {
+    display: flex;
+    font-size: 13px;
+    border: none;
+    padding: 15px;
+    border-radius: 3px;
+    letter-spacing: 2px;
+
+    p {
+      margin: 0 0 0 7px;
+      font-weight: 600;
+    }
+
+    img {
+      align-self: normal;
+    }
+  }
+}
+
+.selected {
+  background: #163250 !important;
+  color: #FFF;
+}
