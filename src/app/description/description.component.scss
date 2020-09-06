@@ -1,0 +1,26 @@
+.no-desc {
+  width: 92%;
+  background: rgba(0,0,0,.12);
+  font-size: 12px;
+  padding: 2%;
+
+  button {
+    color: #33639C;
+    border: none;
+    outline: none;
+    background: transparent;
+  }
+}
+
+.desc-list {
+  overflow: auto;
+  width: 91%;
+  margin: 10px 5px;
+
+  p {
+    font-size: 13px;
+    color: #33639C;
+    padding: 5px 0;
+    margin: 0;
+  }
+}
