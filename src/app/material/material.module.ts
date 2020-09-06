@@ -6,10 +6,16 @@ import {
 } from '@angular/material';
 import { MatTableModule } from '@angular/material/table';
 import { TableComponent } from '../table/table.component';
+import { DescriptionComponent } from '../description/description.component';
+import { SearchBoardComponent } from '../search-board/search-board.component';
+import { ButtonComponent } from '../button/button.component';
 
 @NgModule({
   declarations: [
-    TableComponent
+    TableComponent,
+    DescriptionComponent,
+    SearchBoardComponent,
+    ButtonComponent
   ],
   imports: [
     CommonModule,
@@ -17,6 +23,11 @@ import { TableComponent } from '../table/table.component';
     MatFormFieldModule,
     MatInputModule
   ],
-  exports: [TableComponent]
+  exports: [
+    TableComponent,
+    DescriptionComponent,
+    SearchBoardComponent,
+    ButtonComponent
+  ]
 })
 export class MaterialModule { }
