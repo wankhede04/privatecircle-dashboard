@@ -1,11 +1,18 @@
+.description {
+  background: #FFF;
+  padding: 20px 15px;
+  height: 76vh;
+  overflow: auto;
+}
+
 .no-desc {
-  width: 92%;
-  background: rgba(0,0,0,.12);
+  width: 100%;
+  background: #ECECEC;
   font-size: 12px;
-  padding: 2%;
+  padding: 4%;
 
   button {
-    color: #33639C;
+    color: #265082;
     border: none;
     outline: none;
     background: transparent;
@@ -13,13 +20,12 @@
 }
 
 .desc-list {
-  overflow: auto;
-  width: 91%;
-  margin: 10px 5px;
+  width: 100%;
+  margin: 25px 5px;
 
   p {
     font-size: 13px;
-    color: #33639C;
+    color: #265082;
     padding: 5px 0;
     margin: 0;
   }
