@@ -1,0 +1,34 @@
+<div class="dashboard">
+  <div class="row action-feature">
+    <div class="col-md-6 buttons">
+      <app-button
+        [selectedButton]="true"
+        [buttonName]="'SAVED LISTS'"
+        [imageSrc]="'white-list'"
+      ></app-button>
+      <app-button
+        [selectedButton]="false"
+        [buttonName]="'SAVED FILTERS'"
+        [imageSrc]="'black-filter'"
+      ></app-button>
+      <app-button
+        [selectedButton]="false"
+        [buttonName]="'SEARCH HISTORY'"
+        [imageSrc]="'black-history'"
+      ></app-button>
+    </div>
+    <div class="col-md-6 no-gutters">
+      <app-search-board
+        (searchFilter)="getSearchKeyword($event)"
+      ></app-search-board>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-9 no-gutters">
+      <app-table></app-table>
+    </div>
+    <div class="col-md-3 no-gutters">
+      <app-description></app-description>
+    </div>
+  </div>
+</div>
