@@ -1,7 +1,7 @@
 .table-container {
   position: relative;
   overflow: auto;
-  height: 76vh;
+  height: 80vh;
 }
 
 .mat-elevation-z8 {
@@ -23,10 +23,6 @@ th.mat-header-cell {
   font-weight: 600;
 }
 
-td.mat-cell {
-  // text-align: justify;
-}
-
 button {
   border: none;
   outline: none;
@@ -45,6 +41,10 @@ button {
 .date-col {
   color: rgba(0,0,0,0.6);
   font-size: 13px
+}
+
+.date-col img {
+  width: 22px;
 }
 
 .name-col {
@@ -71,14 +71,19 @@ button {
 
 .mat-column-details {
   text-align: end;
+  width: 10%;
 }
 
 .mat-column-actions {
   img {
     margin: 0 5px;
   }
+}
 
-  svg path {
-    fill: red !important;
-  }
+tr.mat-header-row {
+  height: 45px;
+}
+
+.mat-column-date {
+  text-align: center;
 }

@@ -4,13 +4,16 @@
     <!-- Position Column -->
     <ng-container matColumnDef="date">
       <th mat-header-cell *matHeaderCellDef> Date </th>
-      <td mat-cell *matCellDef="let element" class="date-col"> {{element.date}} </td>
+      <td mat-cell *matCellDef="let element" class="date-col">
+        {{element.date}}
+        <img *ngIf="!element.date" src="favicon.png" alt="">
+      </td>
     </ng-container>
   
     <!-- Name Column -->
     <ng-container matColumnDef="listName">
       <th mat-header-cell *matHeaderCellDef> List name </th>
-      <td mat-cell *matCellDef="let element" class="name-col name-col-blue"> {{element.listName}} </td>
+      <td mat-cell *matCellDef="let element" class="name-col name-col-blue" [ngClass]="{ 'name-col-blue': !element.date}"> {{element.listName}} </td>
     </ng-container>
   
     <!-- Weight Column -->
@@ -23,10 +26,10 @@
     <ng-container matColumnDef="actions">
       <th mat-header-cell *matHeaderCellDef> Actions </th>
       <td mat-cell *matCellDef="let element">
-        <img src="assets/images/black-mail.svg" alt="">
-        <img src="assets/images/black-share.svg" alt="">
-        <img src="assets/images/black-pencil.svg" alt="">
-        <img src="assets/images/black-trash.svg" alt="">
+        <img *ngIf="element.actions.mail" src="assets/images/black-mail.svg" alt="">
+        <img *ngIf="element.actions.share" src="assets/images/black-share.svg" alt="">
+        <img *ngIf="element.actions.edit" src="assets/images/black-pencil.svg" alt="">
+        <img *ngIf="element.actions.delete" src="assets/images/black-trash.svg" alt="">
       </td>
     </ng-container>
 
@@ -34,7 +37,7 @@
     <ng-container matColumnDef="details">
       <th mat-header-cell *matHeaderCellDef></th>
       <td mat-cell *matCellDef="let element">
-        <button>Details</button>
+        <button (click)="showIndustryDetails(element.details)">Details</button>
       </td>
     </ng-container>
 
