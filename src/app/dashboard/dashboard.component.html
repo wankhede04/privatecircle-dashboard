@@ -2,19 +2,22 @@
   <div class="row action-feature">
     <div class="col-md-6 buttons">
       <app-button
-        [selectedButton]="true"
+        (click)="onButtonClicked(0)"
+        [selectedButton]="buttonClicked[0]"
         [buttonName]="'SAVED LISTS'"
-        [imageSrc]="'white-list'"
+        [imageSrc]="'list'"
       ></app-button>
       <app-button
-        [selectedButton]="false"
+        (click)="onButtonClicked(1)"
+        [selectedButton]="buttonClicked[1]"
         [buttonName]="'SAVED FILTERS'"
-        [imageSrc]="'black-filter'"
+        [imageSrc]="'filter'"
       ></app-button>
       <app-button
-        [selectedButton]="false"
+        (click)="onButtonClicked(2)"
+        [selectedButton]="buttonClicked[2]"
         [buttonName]="'SEARCH HISTORY'"
-        [imageSrc]="'black-history'"
+        [imageSrc]="'history'"
       ></app-button>
     </div>
     <div class="col-md-6 no-gutters">
@@ -25,10 +28,16 @@
   </div>
   <div class="row">
     <div class="col-md-9 no-gutters">
-      <app-table></app-table>
+      <app-table
+        [tableData]="dataValues$ | async"
+        (detailsEvent)="getDetailsEvent($event)"
+        [searchString]="searchKeyword"
+      ></app-table>
     </div>
     <div class="col-md-3 no-gutters">
-      <app-description></app-description>
+      <app-description
+        [industryDetails]="selectedIndustryDetails"
+      ></app-description>
     </div>
   </div>
 </div>
